@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="ONYX DOJO">
+  <rect width="1200" height="630" fill="#050505"/>
+  <circle cx="600" cy="235" r="112" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <text x="600" y="278" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="132" font-weight="700">O</text>
+  <text x="600" y="430" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="92" font-weight="700">ONYX DOJO</text>
+  <text x="600" y="492" text-anchor="middle" fill="#cfcfcf" font-family="Arial, sans-serif" font-size="32" font-weight="700">JU JITSU TRADICIONAL | MONTE ALTO/SP</text>
+</svg>
