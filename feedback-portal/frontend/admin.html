@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo | ONYX DOJO</title>
+    <link rel="stylesheet" href="/feedback-portal/frontend/styles/main.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/assets/onyx-dojo-logo-cropped.png" alt="ONYX DOJO" />
+        <span><strong>ONYX DOJO</strong><small>Admin Feedbacks</small></span>
+      </a>
+      <nav>
+        <a href="/portal">Enviar</a>
+        <a href="/feedbacks">Feedbacks</a>
+        <button class="link-button" type="button" data-logout>Sair</button>
+      </nav>
+    </header>
+
+    <main class="page-shell admin-shell">
+      <section class="login-panel" data-login-panel>
+        <form class="feedback-form compact-form" data-login-form>
+          <div class="form-head">
+            <span>Acesso restrito</span>
+            <strong>Painel administrativo</strong>
+          </div>
+          <label>Usuário<input name="username" type="text" autocomplete="username" required /></label>
+          <label>Senha<input name="password" type="password" autocomplete="current-password" required /></label>
+          <button class="btn" type="submit">Entrar</button>
+          <p class="form-message" data-login-message role="status"></p>
+        </form>
+      </section>
+
+      <section class="admin-panel hidden" data-admin-panel>
+        <div class="admin-head">
+          <div>
+            <p class="eyebrow">Moderacao</p>
+            <h1>Feedbacks recebidos</h1>
+          </div>
+          <label class="filter-label">
+            Status
+            <select data-status-filter>
+              <option>Todos</option>
+              <option>Pendente</option>
+              <option>Aprovado</option>
+              <option>Rejeitado</option>
+            </select>
+          </label>
+        </div>
+        <div class="admin-list" data-admin-list></div>
+      </section>
+    </main>
+
+    <template data-admin-card-template>
+      <article class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <strong data-name></strong>
+            <span data-meta></span>
+          </div>
+          <mark data-status></mark>
+        </div>
+        <div class="editable-grid">
+          <label>Nome<input data-edit="name" /></label>
+          <label>Tipo
+            <select data-edit="user_type">
+              <option>Aluno</option>
+              <option>Pai</option>
+              <option>Mãe</option>
+              <option>Responsável</option>
+            </select>
+          </label>
+          <label>Tempo<input data-edit="team_time" /></label>
+          <label>Nota<input data-edit="rating" type="number" min="1" max="5" /></label>
+        </div>
+        <label>Comentário<textarea data-edit="comment" rows="4"></textarea></label>
+        <label class="check-line"><input data-edit="publish_authorized" type="checkbox" /><span>Autorizado para publicação</span></label>
+        <div class="action-row">
+          <button type="button" data-action="save">Salvar</button>
+          <button type="button" data-action="approve">Aprovar</button>
+          <button type="button" data-action="reject">Rejeitar</button>
+          <button class="danger" type="button" data-action="delete">Excluir</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="/feedback-portal/frontend/scripts/admin.js"></script>
+  </body>
+</html>

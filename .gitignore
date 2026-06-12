@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+feedback-portal/database/*.sqlite3
+feedback-portal/database/*.sqlite3-*
+.env

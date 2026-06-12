@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/portal",
+      "destination": "/feedback-portal/frontend/index.html"
+    },
+    {
+      "source": "/admin-feedbacks",
+      "destination": "/feedback-portal/frontend/admin.html"
+    },
+    {
+      "source": "/feedbacks",
+      "destination": "/feedback-portal/frontend/feedbacks.html"
+    }
+  ]
+}

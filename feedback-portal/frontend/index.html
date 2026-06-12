@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal de Feedback ONYX DOJO para alunos, pais, mães e responsáveis." />
+    <title>Portal de Feedback | ONYX DOJO</title>
+    <link rel="stylesheet" href="/feedback-portal/frontend/styles/main.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/assets/onyx-dojo-logo-cropped.png" alt="ONYX DOJO" />
+        <span><strong>ONYX DOJO</strong><small>Portal de Feedback</small></span>
+      </a>
+      <nav>
+        <a href="/portal">Enviar</a>
+        <a href="/feedbacks">Feedbacks</a>
+        <a href="/admin-feedbacks">Admin</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Alunos, pais e responsáveis</p>
+          <h1>Ajude a equipe ONYX DOJO a evoluir.</h1>
+          <p>Envie sua avaliação sobre atendimento, instrutores, comunicação e experiência no projeto. Todo feedback passa por análise antes de ser publicado.</p>
+          <div class="metric-row">
+            <span>Análise interna</span>
+            <span>Publicação moderada</span>
+            <span>Ambiente seguro</span>
+          </div>
+        </div>
+
+        <form class="feedback-form" data-feedback-form>
+          <input class="bot-field" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" />
+
+          <div class="form-head">
+            <span>Nova avaliação</span>
+            <strong>Sua opinião importa</strong>
+          </div>
+
+          <label>
+            Nome completo
+            <input name="name" type="text" autocomplete="name" minlength="3" maxlength="120" required />
+          </label>
+
+          <div class="field-grid">
+            <label>
+              Tipo de usuário
+              <select name="user_type" required>
+                <option value="">Selecione</option>
+                <option>Aluno</option>
+                <option>Pai</option>
+                <option>Mãe</option>
+                <option>Responsável</option>
+              </select>
+            </label>
+
+            <label>
+              Tempo na equipe
+              <input name="team_time" type="text" maxlength="80" placeholder="Opcional" />
+            </label>
+          </div>
+
+          <fieldset class="rating-field">
+            <legend>Nota</legend>
+            <div class="stars" aria-label="Nota de 1 a 5 estrelas">
+              <input id="star5" type="radio" name="rating" value="5" required />
+              <label for="star5">★</label>
+              <input id="star4" type="radio" name="rating" value="4" />
+              <label for="star4">★</label>
+              <input id="star3" type="radio" name="rating" value="3" />
+              <label for="star3">★</label>
+              <input id="star2" type="radio" name="rating" value="2" />
+              <label for="star2">★</label>
+              <input id="star1" type="radio" name="rating" value="1" />
+              <label for="star1">★</label>
+            </div>
+          </fieldset>
+
+          <label>
+            Comentario
+            <textarea name="comment" rows="6" minlength="10" maxlength="1200" required></textarea>
+          </label>
+
+          <label class="check-line">
+            <input name="publish_authorized" type="checkbox" />
+            <span>Autorizo a publicação deste comentário no site da OnyxDojo</span>
+          </label>
+
+          <button class="btn" type="submit">Enviar Feedback</button>
+          <p class="form-message" data-form-message role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/feedback-portal/frontend/scripts/form.js"></script>
+  </body>
+</html>

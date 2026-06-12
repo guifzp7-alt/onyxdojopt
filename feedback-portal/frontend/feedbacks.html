@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedbacks Aprovados | ONYX DOJO</title>
+    <link rel="stylesheet" href="/feedback-portal/frontend/styles/main.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/assets/onyx-dojo-logo-cropped.png" alt="ONYX DOJO" />
+        <span><strong>ONYX DOJO</strong><small>Portal de Feedback</small></span>
+      </a>
+      <nav>
+        <a href="/portal">Enviar</a>
+        <a href="/feedbacks">Feedbacks</a>
+        <a href="/admin-feedbacks">Admin</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="list-heading">
+        <p class="eyebrow">Avaliacoes aprovadas</p>
+        <h1>Feedbacks da comunidade.</h1>
+        <div class="summary-grid">
+          <article><strong data-average>0.0</strong><span>Media geral</span></article>
+          <article><strong data-total>0</strong><span>Avaliacoes publicadas</span></article>
+        </div>
+      </section>
+
+      <section class="cards-grid" data-feedback-list></section>
+    </main>
+
+    <script src="/feedback-portal/frontend/scripts/feedbacks.js"></script>
+  </body>
+</html>
