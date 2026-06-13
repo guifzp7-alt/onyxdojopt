@@ -467,6 +467,21 @@ mark {
   color: var(--ink);
 }
 
+.portal-footer {
+  border-top: 1px solid var(--line);
+  color: rgba(246, 246, 242, 0.52);
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin: 0 auto;
+  max-width: var(--max);
+  padding: 20px clamp(18px, 5vw, 36px) 34px;
+  text-align: center;
+}
+
+.portal-footer a {
+  color: var(--gold);
+}
+
 @media (max-width: 920px) {
   .hero-grid,
   .cards-grid {
